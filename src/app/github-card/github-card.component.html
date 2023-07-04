@@ -1,0 +1,42 @@
+<div class="card-container">
+  <div class="user-name">
+    <div class="circle">
+      <img src="../../assets/logo-rockeatset.png" alt="logo" />
+    </div>
+    <p>{{ data.login }}</p>
+  </div>
+
+  <div class="user-photo">
+    <img src="{{ data.avatar_url }}" alt="" />
+    <div class="user-info-container">
+      <div class="info-container">
+        <i class="fa-solid fa-user-group"></i>
+        <p>{{ data.followers }}</p>
+        <p>Seguidores</p>
+      </div>
+      <div class="info-container">
+        <i class="fa-solid fa-user-group"></i>
+        <p>{{ data.following }}</p>
+        <p>Seguindo</p>
+      </div>
+      <div class="info-container">
+        <i class="fa-solid fa-book"></i>
+        <p>{{ data.public_repos }}</p>
+        <p>Repositorios</p>
+      </div>
+      <div class="info-container">
+        <i class="fa-solid fa-building"></i>
+        <p>{{ data.company }}</p>
+      </div>
+      <div class="info-container">
+        <i class="fa-solid fa-location-dot"></i>
+        <p>{{ data.location }}</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="brand-container">
+    <img src="../../assets/logo-rockeatset.png" alt="" width="25" />
+    <p>RocketCard</p>
+  </div>
+</div>

@@ -1,0 +1,87 @@
+$cardBackgroundColor: #0e1218;
+$userBackgroundColor: #8257e5;
+
+@mixin center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.card-container {
+  display: flex;
+  flex-direction: column;
+  background-color: $cardBackgroundColor;
+  border: 20px solid black;
+  border-left: 10px solid black;
+  border-right: 10px solid black;
+  border-radius: 50px;
+  width: 400px;
+  padding: 40px;
+  overflow: hidden;
+  gap: 50px;
+
+  .user-name {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+
+    .circle {
+      @include center();
+      height: 50px;
+      width: 50px;
+      border: 1px solid white;
+      border-radius: 100%;
+    }
+
+    img {
+      height: 55px;
+      width: 55px;
+      object-fit: contain;
+      padding: 10px;
+    }
+  }
+
+  .user-photo {
+    @include center();
+    width: 330px;
+    height: 330px;
+    left: 20px;
+    border-radius: 100%;
+    position: relative;
+    img {
+      border-radius: 100%;
+      width: 350px;
+      height: 350px;
+      object-fit: cover;
+      border: 10px solid $userBackgroundColor;
+    }
+  }
+
+  .user-info-container {
+    display: flex;
+    flex-direction: column;
+    border-radius: 50px;
+    background: linear-gradient(180deg, #000 3.65%, rgba(70, 69, 69, 0.72) 53.65%, rgba(62, 56, 56, 0.42) 100%);
+    font-size: 0.8rem;
+    width: fit-content;
+    padding: 20px;
+    border-radius: 50px;
+    position: absolute;
+    bottom: 20px;
+    left: -20px;
+
+    .info-container {
+      display: flex;
+      gap: 5px;
+      align-items: center;
+    }
+  }
+
+  .brand-container {
+    display: flex;
+    justify-content: end;
+    gap: 10px;
+    font-weight: 300;
+    text-transform: uppercase;
+  }
+}
